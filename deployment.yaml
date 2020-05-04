@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: gcr.io/saas-brcm/hello-app:v1
+        image: gcr.io/saas-brcm/hello-app:v2
         ports:
         - containerPort: 8080

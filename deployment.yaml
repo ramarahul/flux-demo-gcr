@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: example-application
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - name: example-application
-        image: gcr.io/gitops-255005/example-application:master-f7517f2
+        image: gcr.io/saas-brcm/hello-app:v1
         ports:
         - containerPort: 8080

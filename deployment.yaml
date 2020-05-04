@@ -6,7 +6,8 @@ metadata:
   labels:
     app: hello
   annotations:
-    fluxcd.io/automated: "true"spec:
+    fluxcd.io/automated: "true
+spec:
   selector:
     matchLabels:
       app: hello
@@ -19,6 +20,6 @@ metadata:
     spec:
       containers:
       - name: hello-app
-        image: gcr.io/saas-brcm/hello-app:v1
+        image: gcr.io/saas-brcm/hello-app:v2
         ports:
         - containerPort: 8080

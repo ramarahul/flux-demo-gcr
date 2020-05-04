@@ -5,6 +5,8 @@ metadata:
   name: helloweb
   labels:
     app: hello
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   selector:
     matchLabels:

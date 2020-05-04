@@ -1,17 +1,23 @@
 # deployment.yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-application
+  name: helloweb
+  labels:
+    app: hello
 spec:
-  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+      tier: web
   template:
     metadata:
       labels:
-        app: example-application
+        app: hello
+        tier: web
     spec:
       containers:
-      - name: example-application
+      - name: hello-app
         image: gcr.io/saas-brcm/hello-app:v1
         ports:
         - containerPort: 8080
